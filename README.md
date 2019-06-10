@@ -8,7 +8,7 @@
 ```
 action "notify slack" {
   needs = "<<previous steps>>"
-  uses = "jakobgalbavy/github-actions/slack-message@Master"
+  uses = "jakobgalbavy/github-actions/slack-message@master"
   secrets = [
     "SLACK_BOT_USER_TOKEN",
   ]
