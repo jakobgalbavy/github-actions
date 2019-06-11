@@ -35,6 +35,6 @@ ARTIFACT_NAME | This is specific for Java builds and will return the latest Arti
 
 Markup | Effect
 ------------ | -------------
-<br> | Newline
-*abc* | **bold**
-_abc_ | _italic_
+`<br>` | Newline
+`*abc*` | **bold**
+`_abc_` | _italic_
