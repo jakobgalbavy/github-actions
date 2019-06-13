@@ -1,4 +1,4 @@
-## HowTo: SlackMessage
+# HowTo: SlackMessage from GitHub Actions
 
 * Create a Slackbot and save the UserToken
 * Set the UserToken in your Actions as Secret `SLACK_BOT_USER_TOKEN`
@@ -8,7 +8,7 @@
 ```
 action "notify slack" {
   needs = "<<previous steps>>"
-  uses = "jakobgalbavy/github-actions/slack-message@Master"
+  uses = "jakobgalbavy/github-actions/slack-message@master"
   secrets = [
     "SLACK_BOT_USER_TOKEN",
   ]
@@ -21,13 +21,20 @@ action "notify slack" {
 }
 ```
 
-### Variables
+## Variables
 You can just put any of these Keys inside any of your env Variables and the will be replaced afterwards.
 
 Key | Value
 ------------ | -------------
-<br> | Newline
 GITHUB_REPOSITORY | Name of the Repository
 GITHUB_ACTOR | Username of the Person who published
 GITHUB_REF | The Branch name this was built on
 ARTIFACT_NAME | This is specific for Java builds and will return the latest Artifact from the `build/` directory. 
+
+## Formatting
+
+Markup | Effect
+------------ | -------------
+`<br>` | Newline
+`*abc*` | **bold**
+`_abc_` | _italic_
